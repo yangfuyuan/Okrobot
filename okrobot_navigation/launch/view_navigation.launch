@@ -1,0 +1,6 @@
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find okrobot_navigation)/navr.rviz" />
+  
+  <!-- add interactive_marker -->
+  <include file="$(find okrobot_navigation)/launch/includes/interactive_marker.launch.xml" />
+</launch>

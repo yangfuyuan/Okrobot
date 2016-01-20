@@ -1,0 +1,6 @@
+<package>
+  <description brief="2C-WXL-00_AF0_ASM.sldasm">2C-WXL-00_AF0_ASM.sldasm</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

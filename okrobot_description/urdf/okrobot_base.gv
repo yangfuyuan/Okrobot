@@ -1,0 +1,149 @@
+digraph G {
+node [shape=box];
+"base_footprint" [label="base_footprint"];
+"base_link" [label="base_link"];
+"circle_base_Link" [label="circle_base_Link"];
+"circle_forward_Link" [label="circle_forward_Link"];
+"laser_base_Link" [label="laser_base_Link"];
+"motor_seat_Link" [label="motor_seat_Link"];
+"motor_seat_plate_Link" [label="motor_seat_plate_Link"];
+"motor_plate_frame_Link" [label="motor_plate_frame_Link"];
+"motor_frame_forward_Link" [label="motor_frame_forward_Link"];
+"axiz_axiz_Link" [label="axiz_axiz_Link"];
+"right_axie_plate_Link" [label="right_axie_plate_Link"];
+"right_plate_flate_Link" [label="right_plate_flate_Link"];
+"right_wheel_Link" [label="right_wheel_Link"];
+"right_key_Link" [label="right_key_Link"];
+"motor_back_Link" [label="motor_back_Link"];
+"motor_frame_plate_Link" [label="motor_frame_plate_Link"];
+"side_plate_Link" [label="side_plate_Link"];
+"side_plate_Link1" [label="side_plate_Link1"];
+"motor_seat_Link1" [label="motor_seat_Link1"];
+"motor_seat_Link2" [label="motor_seat_Link2"];
+"motor_seat_plate_Link2" [label="motor_seat_plate_Link2"];
+"motor_plate_frame_Link2" [label="motor_plate_frame_Link2"];
+"motor_frame_forward_Link2" [label="motor_frame_forward_Link2"];
+"motor_axiz_Link2" [label="motor_axiz_Link2"];
+"axiz_flat_Link2" [label="axiz_flat_Link2"];
+"flat_forward_Link2" [label="flat_forward_Link2"];
+"left_wheel_Link" [label="left_wheel_Link"];
+"axiz_key_Link2" [label="axiz_key_Link2"];
+"motor_back_Link2" [label="motor_back_Link2"];
+"motor_frame_plate_Link2" [label="motor_frame_plate_Link2"];
+"side_plate_Link2" [label="side_plate_Link2"];
+"side_plate_Link3" [label="side_plate_Link3"];
+"motor_seat_Link3" [label="motor_seat_Link3"];
+"universal_wheel_seat_Link" [label="universal_wheel_seat_Link"];
+"universal_wheel_base_Link" [label="universal_wheel_base_Link"];
+"universal_wheel_link_Link" [label="universal_wheel_link_Link"];
+"universal_wheel_Link" [label="universal_wheel_Link"];
+"universal_wheel_seat_Link1" [label="universal_wheel_seat_Link1"];
+"universal_wheel_base_Link1" [label="universal_wheel_base_Link1"];
+"universal_wheel_link_Link1" [label="universal_wheel_link_Link1"];
+"universal_wheel_Link1" [label="universal_wheel_Link1"];
+"universal_wheel_seat_Link2" [label="universal_wheel_seat_Link2"];
+"universal_wheel_base_Link2" [label="universal_wheel_base_Link2"];
+"universal_wheel_link_Link2" [label="universal_wheel_link_Link2"];
+"universal_wheel_Link2" [label="universal_wheel_Link2"];
+"universal_wheel_seat_Link3" [label="universal_wheel_seat_Link3"];
+"universal_wheel_base_Link3" [label="universal_wheel_base_Link3"];
+"universal_wheel_link_Link3" [label="universal_wheel_link_Link3"];
+"universal_wheel_Link3" [label="universal_wheel_Link3"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_footprint" -> "base_joint" [label="xyz: 0 0 0.098 \nrpy: 0 -0 0"]
+"base_joint" -> "base_link"
+"base_link" -> "circle_base_joint" [label="xyz: 0 0 -0.0045 \nrpy: -4.66093e-50 0 0"]
+"circle_base_joint" -> "circle_base_Link"
+"circle_base_Link" -> "circle_forward_joint" [label="xyz: 0.219 0 -0.037 \nrpy: -4.66093e-50 0 0"]
+"circle_forward_joint" -> "circle_forward_Link"
+"circle_forward_Link" -> "laser_base_joint" [label="xyz: -0.119 0.062 0.0385 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"laser_base_joint" -> "laser_base_Link"
+"base_link" -> "motor_seat_joint" [label="xyz: -0.1 -0.062 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"motor_seat_joint" -> "motor_seat_Link"
+"motor_seat_Link" -> "motor_seat_plate_joint" [label="xyz: -0.009 0 -0.017 \nrpy: -9.35109e-67 0 0"]
+"motor_seat_plate_joint" -> "motor_seat_plate_Link"
+"motor_seat_plate_Link" -> "motor_plate_frame_joint" [label="xyz: 0.109 -0.08 -0.027 \nrpy: -9.35109e-67 0 0"]
+"motor_plate_frame_joint" -> "motor_plate_frame_Link"
+"motor_plate_frame_Link" -> "motor_frame_forward_joint" [label="xyz: 0 0.005 0.04 \nrpy: -9.35109e-67 0 0"]
+"motor_frame_forward_joint" -> "motor_frame_forward_Link"
+"motor_frame_forward_Link" -> "axiz_axiz_joint" [label="xyz: 0 0.023 -0.013 \nrpy: -9.35109e-67 0 0"]
+"axiz_axiz_joint" -> "axiz_axiz_Link"
+"axiz_axiz_Link" -> "right_axie_plate_joint" [label="xyz: 0 -0.075 0 \nrpy: -9.35109e-67 0 0"]
+"right_axie_plate_joint" -> "right_axie_plate_Link"
+"right_axie_plate_Link" -> "right_plate_flate_joint" [label="xyz: 0 0.041 0 \nrpy: -9.35109e-67 0 0"]
+"right_plate_flate_joint" -> "right_plate_flate_Link"
+"right_plate_flate_Link" -> "right_wheel_joint" [label="xyz: 0 -0.028 0 \nrpy: -9.35109e-67 0 0"]
+"right_wheel_joint" -> "right_wheel_Link"
+"axiz_axiz_Link" -> "right_key_joint" [label="xyz: -0.0023487 -0.0355 -0.00920509 \nrpy: -9.35109e-67 0 0"]
+"right_key_joint" -> "right_key_Link"
+"motor_frame_forward_Link" -> "motor_back_joint" [label="xyz: 0 0.046 0 \nrpy: -9.35109e-67 0 0"]
+"motor_back_joint" -> "motor_back_Link"
+"motor_plate_frame_Link" -> "motor_frame_plate_joint" [label="xyz: 0.109 0.08 0.027 \nrpy: -9.35109e-67 0 0"]
+"motor_frame_plate_joint" -> "motor_frame_plate_Link"
+"motor_plate_frame_Link" -> "side_plate_joint" [label="xyz: -0.05 0.015 0.065 \nrpy: -9.35109e-67 0 0"]
+"side_plate_joint" -> "side_plate_Link"
+"motor_plate_frame_Link" -> "side_plate_joint1" [label="xyz: 0.05 0.015 0.065 \nrpy: -9.35109e-67 0 0"]
+"side_plate_joint1" -> "side_plate_Link1"
+"base_link" -> "motor_seat_joint1" [label="xyz: 0.1 -0.062 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"motor_seat_joint1" -> "motor_seat_Link1"
+"base_link" -> "motor_seat_joint2" [label="xyz: 0.1 0.062 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"motor_seat_joint2" -> "motor_seat_Link2"
+"motor_seat_Link2" -> "motor_seat_plate_joint2" [label="xyz: 0.009 0 -0.017 \nrpy: -9.35109e-67 0 0"]
+"motor_seat_plate_joint2" -> "motor_seat_plate_Link2"
+"motor_seat_plate_Link2" -> "motor_plate_frame_joint2" [label="xyz: -0.109 0.08 -0.027 \nrpy: -9.35109e-67 0 0"]
+"motor_plate_frame_joint2" -> "motor_plate_frame_Link2"
+"motor_plate_frame_Link2" -> "motor_frame_forward_joint2" [label="xyz: 0 -0.005 0.04 \nrpy: -9.35109e-67 0 0"]
+"motor_frame_forward_joint2" -> "motor_frame_forward_Link2"
+"motor_frame_forward_Link2" -> "motor_axiz_joint2" [label="xyz: 0 -0.023 -0.013 \nrpy: -9.35109e-67 0 0"]
+"motor_axiz_joint2" -> "motor_axiz_Link2"
+"motor_axiz_Link2" -> "axiz_flat_joint2" [label="xyz: 0 0.075 0 \nrpy: -9.35109e-67 0 0"]
+"axiz_flat_joint2" -> "axiz_flat_Link2"
+"axiz_flat_Link2" -> "flat_forward_joint2" [label="xyz: 0 -0.041 0 \nrpy: -9.35109e-67 0 0"]
+"flat_forward_joint2" -> "flat_forward_Link2"
+"flat_forward_Link2" -> "left_wheel_joint" [label="xyz: 0 0.028 0 \nrpy: -9.35109e-67 0 0"]
+"left_wheel_joint" -> "left_wheel_Link"
+"motor_axiz_Link2" -> "axiz_key_joint2" [label="xyz: -0.00585849 0.0355 -0.00747851 \nrpy: -9.35109e-67 0 0"]
+"axiz_key_joint2" -> "axiz_key_Link2"
+"motor_frame_forward_Link2" -> "motor_back_joint2" [label="xyz: 0 -0.046 0 \nrpy: -9.35109e-67 0 0"]
+"motor_back_joint2" -> "motor_back_Link2"
+"motor_plate_frame_Link2" -> "motor_frame_plate_joint2" [label="xyz: -0.109 -0.08 0.027 \nrpy: -9.35109e-67 0 0"]
+"motor_frame_plate_joint2" -> "motor_frame_plate_Link2"
+"motor_plate_frame_Link2" -> "side_plate_joint2" [label="xyz: -0.05 -0.015 0.065 \nrpy: -9.35109e-67 0 0"]
+"side_plate_joint2" -> "side_plate_Link2"
+"motor_plate_frame_Link2" -> "side_plate_joint3" [label="xyz: 0.05 -0.015 0.065 \nrpy: -9.35109e-67 0 0"]
+"side_plate_joint3" -> "side_plate_Link3"
+"base_link" -> "motor_seat_joint3" [label="xyz: -0.1 0.062 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"motor_seat_joint3" -> "motor_seat_Link3"
+"base_link" -> "universal_wheel_seat_joint" [label="xyz: 0.145 -0.12175 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"universal_wheel_seat_joint" -> "universal_wheel_seat_Link"
+"universal_wheel_seat_Link" -> "universal_wheel_base_joint" [label="xyz: 0 0 -0.019 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_base_joint" -> "universal_wheel_base_Link"
+"universal_wheel_base_Link" -> "universal_wheel_link_joint" [label="xyz: 0 0 -0.013 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_link_joint" -> "universal_wheel_link_Link"
+"universal_wheel_link_Link" -> "universal_wheel_joint" [label="xyz: 0.023 0 -0.035 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_joint" -> "universal_wheel_Link"
+"base_link" -> "universal_wheel_seat_joint1" [label="xyz: 0.145 0.12225 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"universal_wheel_seat_joint1" -> "universal_wheel_seat_Link1"
+"universal_wheel_seat_Link1" -> "universal_wheel_base_joint1" [label="xyz: 0 0 -0.019 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_base_joint1" -> "universal_wheel_base_Link1"
+"universal_wheel_base_Link1" -> "universal_wheel_link_joint1" [label="xyz: 0 0 -0.013 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_link_joint1" -> "universal_wheel_link_Link1"
+"universal_wheel_link_Link1" -> "universal_wheel_joint1" [label="xyz: 0.023 0 -0.035 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_joint1" -> "universal_wheel_Link1"
+"base_link" -> "universal_wheel_seat_joint2" [label="xyz: -0.145 0.12225 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"universal_wheel_seat_joint2" -> "universal_wheel_seat_Link2"
+"universal_wheel_seat_Link2" -> "universal_wheel_base_joint2" [label="xyz: 0 0 -0.019 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_base_joint2" -> "universal_wheel_base_Link2"
+"universal_wheel_base_Link2" -> "universal_wheel_link_joint2" [label="xyz: 0 0 -0.013 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_link_joint2" -> "universal_wheel_link_Link2"
+"universal_wheel_link_Link2" -> "universal_wheel_joint2" [label="xyz: -0.023 0 -0.035 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_joint2" -> "universal_wheel_Link2"
+"base_link" -> "universal_wheel_seat_joint3" [label="xyz: -0.145 -0.12175 -0.003 \nrpy: 2.84867e-65 -8.94467e-17 -5.37369e-34"]
+"universal_wheel_seat_joint3" -> "universal_wheel_seat_Link3"
+"universal_wheel_seat_Link3" -> "universal_wheel_base_joint3" [label="xyz: 0 0 -0.019 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_base_joint3" -> "universal_wheel_base_Link3"
+"universal_wheel_base_Link3" -> "universal_wheel_link_joint3" [label="xyz: 0 0 -0.013 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_link_joint3" -> "universal_wheel_link_Link3"
+"universal_wheel_link_Link3" -> "universal_wheel_joint3" [label="xyz: -0.023 0 -0.035 \nrpy: -9.35109e-67 0 0"]
+"universal_wheel_joint3" -> "universal_wheel_Link3"
+}

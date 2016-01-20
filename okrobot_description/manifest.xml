@@ -1,0 +1,6 @@
+<package>
+  <description brief="okrobot_description">okrobot_description</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

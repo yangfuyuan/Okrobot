@@ -1,0 +1,24 @@
+<package>
+  <name>okrobot</name>
+  <version>0.4.0</version>
+  <description>ROS OKROBOT</description>
+  <maintainer email="okrobot@autoagv.com">Patrick Goebel</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://www.autoagv.com</url>
+
+  <url type="bugtracker">http://www.autoagv.com/issues</url>
+
+  <author email="okrobot@autoagv.com">Maintained by Yang Fu Yuan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>okrobot_description</run_depend>
+  <run_depend>okrobot_bringup</run_depend>
+  <run_depend>okrobot_navigation</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

@@ -1,0 +1,149 @@
+<robot
+  name="2C-WXL-00_AF0_ASM.sldasm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.015396" />
+      <inertia
+        ixx="2.6829E-06"
+        ixy="-5.6587E-23"
+        ixz="-1.8095E-22"
+        iyy="5.8911E-06"
+        iyz="-4.4898E-23"
+        izz="3.7918E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_up_Link">
+    <inertial>
+      <origin
+        xyz="-0.0015495 0.011816 0.0082024"
+        rpy="0 0 0" />
+      <mass
+        value="0.012085" />
+      <inertia
+        ixx="4.5807E-06"
+        ixy="-2.2651E-07"
+        ixz="1.9169E-08"
+        iyy="4.6728E-06"
+        iyz="1.2002E-06"
+        izz="4.6779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/wheel_up_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/wheel_up_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_up_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.013 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_up_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_down_Link">
+    <inertial>
+      <origin
+        xyz="-3.6429E-17 0 -3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.048249" />
+      <inertia
+        ixx="1.4761E-05"
+        ixy="-1.5679E-21"
+        ixz="-8.9444E-07"
+        iyy="1.0022E-05"
+        iyz="2.8247E-22"
+        izz="1.0191E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/wheel_down_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/2C-WXL-00_AF0_ASM.sldasm/meshes/wheel_down_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_down_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0042662 0.035 0.022601"
+      rpy="0 0 0" />
+    <parent
+      link="wheel_up_Link" />
+    <child
+      link="wheel_down_Link" />
+    <axis
+      xyz="-0.98265 0 -0.18549" />
+  </joint>
+</robot>

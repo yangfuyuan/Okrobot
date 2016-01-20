@@ -1,0 +1,19 @@
+<launch>
+  <arg name="scan_topic" default="scan" />
+  <arg name="laser_frame" default="base_laser_frame" />
+  <!--arg name="laser_port" default="/dev/ttyUSB0" /-->
+  
+  <node name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
+    <param name="com_path" type="string" value="/dev/ttyUSB0" />
+    <param name="com_baudrate" type="int" value="115200" />
+    <param name="frame_id" type="string" value="$(arg laser_frame)" />
+    <param name="inverted"            type="bool"   value="false"/>
+    <param name="angle_compensate"    type="bool"   value="true"/>
+    <param name="range_min" type="double" value="0.18" />
+    <param name="range_max" type="double" value="6.0" />
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+
+  <!--we need a static transform for the laser-->
+  <node pkg="tf" type="static_transform_publicsher" name="base_scan_to_laser" args="0 0 0 0 0 0 /base_scan_link /laser 100" />
+</launch>

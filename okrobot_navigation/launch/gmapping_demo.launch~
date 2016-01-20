@@ -1,0 +1,14 @@
+<launch>
+  <!-- https://github.com/ros-planning/navigation/issues/206 -->
+  <rosparam command="delete" ns="move_base" />
+  <include file="$(find okrobot_bringup)/launch/2dsensor.launch">
+    
+    <!-- We must specify an absolute topic name because if not it will be prefixed by "$(arg camera)".
+         Probably is a bug in the nodelet manager: https://github.com/ros/nodelet_core/issues/7 --> 
+    <arg name="scan_topic" value="/scan" />
+  </include>
+  <include file="$(find okrobot_navigation)/launch/includes/gmapping.launch.xml"/>
+
+  <include file="$(find okrobot_navigation)/launch/includes/move_base.launch.xml"/>
+
+</launch>

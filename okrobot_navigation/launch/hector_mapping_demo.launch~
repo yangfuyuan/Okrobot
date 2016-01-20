@@ -1,0 +1,7 @@
+<launch>
+  <arg name="move_base_group" default="okrobot" />
+  <include file="$(find okrobot_bringup)/launch/includes/hector_mapping.launch.xml"/>
+  <include file="$(find okrobot_bringup)/launch/includes/move_base.launch.xml">
+    <arg name="move_base_group" value="$(arg move_base_group)"/>
+  </include>
+</launch>

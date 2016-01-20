@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot name="okrobot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!--
+  The complete turtlebot library of xacros for easy reference
+ -->
+  <!-- General -->
+  <xacro:include filename="$(find okrobot_description)/urdf/common_properties.urdf.xacro"/>
+  <xacro:include filename="$(find okrobot_description)/urdf/okrobot_properties.urdf.xacro"/> 
+
+
+<!-- Need changes in Okrobot base and circle -->
+
+  <!-- Bases -->
+  <xacro:include filename="$(find okrobot_description)/urdf/okrobot_base.urdf.xacro"/>  
+
+<!--  <xacro:include filename="$(find create_description)/urdf/create.urdf.xacro"/> 
+  <xacro:include filename="$(find kobuki_description)/urdf/kobuki.urdf.xacro" />
+-->
+  <!-- Stacks -->
+<!--  <xacro:include filename="$(find Okrobot_description)/urdf/circles.urdf.xacro"/>  -->
+
+
+<!-- <xacro:include filename="$(find Okrobot_description)/urdf/stacks/circles.urdf.xacro"/> -->
+<!--  <xacro:include filename="$(find turtlebot_description)/urdf/stacks/hexagons.urdf.xacro"/> -->
+
+  <!-- 3D Sensors -->
+
+
+  <!--xacro:include filename="$(find Okrobot_description)/urdf/sensors/kinect.urdf.xacro"/-->
+  <!--xacro:include filename="$(find Okrobot_description)/urdf/sensors/asus_xtion_pro.urdf.xacro"/--> 
+  <xacro:include filename="$(find okrobot_description)/urdf/sensors/hokuyo.urdf.xacro"/>
+
+  <!-- Body of Okrobot, with plates, standoffs and Create (including sim sensors) -->
+  <okrobot_base/>
+  
+  <!-- Kinect frames and mounting (includes simulation) -->
+  <!--turtlebot_kinect/-->
+
+  <!-- laser frames and mounting (includes simulation) -->
+  <hokuyo/>
+</robot>

@@ -1,0 +1,2542 @@
+<?xml version="1.0" ?>
+<robot
+  name="Okrobot_base">
+  <link 
+    name="base_footprint"/>
+    <joint name="base_joint" type="fixed">
+      <origin xyz="0 0 0.098" rpy="0 0 0" />
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+    </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00018628340886144 1.53582507695403E-17 1.06192210597669E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.865380956979762" />
+      <inertia
+        ixx="0.0142073495738409"
+        ixy="5.27916405992731E-19"
+        ixz="1.83297532949466E-18"
+        iyy="0.0213255607737328"
+        iyz="-3.52986998278532E-21"
+        izz="0.0355277180618319" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="universal_wheel_seat_Link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.38777878078145E-17 -0.0130913380587656"
+        rpy="0 0 0" />
+      <mass
+        value="0.0271543501807284" />
+      <inertia
+        ixx="1.99446658137709E-05"
+        ixy="-1.59266733775314E-21"
+        ixz="6.71426720479861E-22"
+        iyy="6.77808483444652E-06"
+        iyz="1.26265909795558E-21"
+        izz="2.48042990210257E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_seat_joint"
+    type="fixed">
+    <origin
+      xyz="0.145 -0.12175 -0.00299999999999982"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="universal_wheel_seat_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_base_Link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0 -0.0042303117525837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0153964635164713" />
+      <inertia
+        ixx="3.79178475123496E-06"
+        ixy="-1.7319094075329E-21"
+        ixz="-3.04312357539511E-22"
+        iyy="2.6828760693717E-06"
+        iyz="-5.79339002434305E-23"
+        izz="5.89114138712654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_seat_Link" />
+    <child
+      link="universal_wheel_base_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_link_Link">
+    <inertial>
+      <origin
+        xyz="0.00834757352565724 1.09108839628502E-06 -0.0118156292161553"
+        rpy="0 0 0" />
+      <mass
+        value="0.012085171004579" />
+      <inertia
+        ixx="4.68160467144296E-06"
+        ixy="-1.036330235877E-10"
+        ixz="-1.22134830387681E-06"
+        iyy="4.57707671214091E-06"
+        iyz="2.7400639854387E-11"
+        izz="4.67278533436171E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0130000000000002"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_base_Link" />
+    <child
+      link="universal_wheel_link_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="universal_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 4.16333634234434E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0482493837796942" />
+      <inertia
+        ixx="1.00224646248544E-05"
+        ixy="1.0366645772579E-21"
+        ixz="-7.19091022089001E-23"
+        iyy="1.49297011222147E-05"
+        iyz="-2.28750148250211E-21"
+        izz="1.00224646248544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.023 0 -0.035"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_link_Link" />
+    <child
+      link="universal_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="universal_wheel_seat_Link1">
+    <inertial>
+      <origin
+        xyz="0 -1.38777878078145E-17 -0.0130913380587656"
+        rpy="0 0 0" />
+      <mass
+        value="0.0271543501807284" />
+      <inertia
+        ixx="1.99446658137709E-05"
+        ixy="-2.35678101241442E-21"
+        ixz="-5.54046762392719E-22"
+        iyy="6.77808483444652E-06"
+        iyz="1.76397458692077E-22"
+        izz="2.48042990210257E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_seat_joint1"
+    type="fixed">
+    <origin
+      xyz="0.145 0.12225 -0.00299999999999984"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="universal_wheel_seat_Link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_base_Link1">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0 -0.00423031175258369"
+        rpy="0 0 0" />
+      <mass
+        value="0.0153964635164713" />
+      <inertia
+        ixx="3.79178475123496E-06"
+        ixy="-3.36042123849667E-22"
+        ixz="-4.18643845963271E-22"
+        iyy="2.6828760693717E-06"
+        iyz="-8.56926419482166E-22"
+        izz="5.89114138712654E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_base_joint1"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0189999999999999"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_seat_Link1" />
+    <child
+      link="universal_wheel_base_Link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_link_Link1">
+    <inertial>
+      <origin
+        xyz="0.00834757352565721 1.09108839628502E-06 -0.0118156292161552"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120851710045789" />
+      <inertia
+        ixx="4.68160467144293E-06"
+        ixy="-1.03633023591078E-10"
+        ixz="-1.22134830387681E-06"
+        iyy="4.57707671214091E-06"
+        iyz="2.74006398603816E-11"
+        izz="4.6727853343617E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_link_joint1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0130000000000004"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_base_Link1" />
+    <child
+      link="universal_wheel_link_Link1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="universal_wheel_Link1">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0482493837796942" />
+      <inertia
+        ixx="1.00224646248544E-05"
+        ixy="-1.4323308482338E-21"
+        ixz="-4.05642781850284E-23"
+        iyy="1.49297011222147E-05"
+        iyz="2.49504792020332E-21"
+        izz="1.00224646248544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_joint1"
+    type="continuous">
+    <origin
+      xyz="0.023 0 -0.035"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_link_Link1" />
+    <child
+      link="universal_wheel_Link1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="universal_wheel_seat_Link2">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -1.38777878078145E-17 -0.0130913380587656"
+        rpy="0 0 0" />
+      <mass
+        value="0.0271543501807284" />
+      <inertia
+        ixx="1.99446658137709E-05"
+        ixy="2.46352784259122E-21"
+        ixz="-1.45056681978495E-21"
+        iyy="6.77808483444652E-06"
+        iyz="2.35435448440314E-21"
+        izz="2.48042990210257E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_seat_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.145 0.12225 -0.0029999999999999"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="universal_wheel_seat_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_base_Link2">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0042303117525837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0153964635164713" />
+      <inertia
+        ixx="3.79178475123496E-06"
+        ixy="-7.75481824268463E-23"
+        ixz="-1.81037742477628E-22"
+        iyy="2.6828760693717E-06"
+        iyz="8.67756125169041E-22"
+        izz="5.89114138712653E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_base_joint2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_seat_Link2" />
+    <child
+      link="universal_wheel_base_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_link_Link2">
+    <inertial>
+      <origin
+        xyz="-0.00834757352565726 -1.09108839627114E-06 -0.0118156292161552"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120851710045788" />
+      <inertia
+        ixx="4.68160467144289E-06"
+        ixy="-1.03633023595982E-10"
+        ixz="1.22134830387679E-06"
+        iyy="4.57707671214089E-06"
+        iyz="-2.74006398627377E-11"
+        izz="4.67278533436167E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_link_joint2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0130000000000001"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_base_Link2" />
+    <child
+      link="universal_wheel_link_Link2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="universal_wheel_Link2">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0482493837796942" />
+      <inertia
+        ixx="1.00224646248544E-05"
+        ixy="-6.83485291635712E-22"
+        ixz="-1.3715192213029E-22"
+        iyy="1.49297011222147E-05"
+        iyz="-2.76354533233335E-21"
+        izz="1.00224646248544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_joint2"
+    type="continuous">
+    <origin
+      xyz="-0.023 0 -0.035"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_link_Link2" />
+    <child
+      link="universal_wheel_Link2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="universal_wheel_seat_Link3">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0130913380587656"
+        rpy="0 0 0" />
+      <mass
+        value="0.0271543501807284" />
+      <inertia
+        ixx="1.99446658137709E-05"
+        ixy="7.68863448827482E-21"
+        ixz="-4.65683553378676E-22"
+        iyy="6.77808483444652E-06"
+        iyz="-4.53767016907936E-21"
+        izz="2.48042990210257E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_seat_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_seat_joint3"
+    type="fixed">
+    <origin
+      xyz="-0.145 -0.12175 -0.00300000000000002"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="universal_wheel_seat_Link3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_base_Link3">
+    <inertial>
+      <origin
+        xyz="0 1.38777878078145E-17 -0.00423031175258369"
+        rpy="0 0 0" />
+      <mass
+        value="0.0153964635164713" />
+      <inertia
+        ixx="3.79178475123496E-06"
+        ixy="7.88406521339604E-22"
+        ixz="-4.82062462000336E-22"
+        iyy="2.6828760693717E-06"
+        iyz="-7.75024998084907E-22"
+        izz="5.89114138712653E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_base_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_base_joint3"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0189999999999996"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_seat_Link3" />
+    <child
+      link="universal_wheel_base_Link3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="universal_wheel_link_Link3">
+    <inertial>
+      <origin
+        xyz="-0.00834757352565726 -1.0910883962989E-06 -0.0118156292161553"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120851710045788" />
+      <inertia
+        ixx="4.68160467144292E-06"
+        ixy="-1.03633023587043E-10"
+        ixz="1.22134830387681E-06"
+        iyy="4.5770767121409E-06"
+        iyz="-2.74006398520829E-11"
+        izz="4.67278533436167E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_link_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_link_joint3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0130000000000002"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_base_Link3" />
+    <child
+      link="universal_wheel_link_Link3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="universal_wheel_Link3">
+    <inertial>
+      <origin
+        xyz="0 -5.55111512312578E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0482493837796942" />
+      <inertia
+        ixx="1.00224646248544E-05"
+        ixy="-1.79287600841154E-22"
+        ixz="9.35712268639441E-22"
+        iyy="1.49297011222147E-05"
+        iyz="1.8451388009825E-21"
+        izz="1.00224646248544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/universal_wheel_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="universal_wheel_joint3"
+    type="continuous">
+    <origin
+      xyz="-0.0230000000000001 0 -0.035"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="universal_wheel_link_Link3" />
+    <child
+      link="universal_wheel_Link3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="motor_seat_Link">
+    <inertial>
+      <origin
+        xyz="-0.000939237456581282 2.22044604925031E-16 -0.0175085667959579"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189292474445598" />
+      <inertia
+        ixx="6.26207958214669E-06"
+        ixy="1.2068820881464E-20"
+        ixz="-9.04183867655058E-09"
+        iyy="2.82510436257498E-06"
+        iyz="1.53417575962244E-20"
+        izz="4.5184184333863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_joint"
+    type="fixed">
+    <origin
+      xyz="-0.1 -0.0619999999999998 -0.00300000000000001"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_seat_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_seat_plate_Link">
+    <inertial>
+      <origin
+        xyz="0.0370584293025813 0 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163676977252262" />
+      <inertia
+        ixx="7.37038999362734E-07"
+        ixy="7.3646483853228E-22"
+        ixz="7.57089651114586E-23"
+        iyy="4.75627979379093E-06"
+        iyz="3.21378071159452E-23"
+        izz="4.75627979379093E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_plate_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_plate_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_plate_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00899999999999984 0 -0.017"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_seat_Link" />
+    <child
+      link="motor_seat_plate_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_plate_frame_Link">
+    <inertial>
+      <origin
+        xyz="2.12886522910629E-17 0.0407081867798832 0.0507536404432316"
+        rpy="0 0 0" />
+      <mass
+        value="0.152933426878464" />
+      <inertia
+        ixx="0.000291366836290034"
+        ixy="7.1485358548968E-20"
+        ixz="-3.56243096756935E-20"
+        iyy="0.000361614923679844"
+        iyz="-2.87845041329261E-05"
+        izz="0.000421194704644509" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_plate_frame_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_plate_frame_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_plate_frame_joint"
+    type="fixed">
+    <origin
+      xyz="0.109 -0.08 -0.027"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_seat_plate_Link" />
+    <child
+      link="motor_plate_frame_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_frame_plate_Link">
+    <inertial>
+      <origin
+        xyz="-0.0370584293025813 0 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163676977252262" />
+      <inertia
+        ixx="7.37038999362733E-07"
+        ixy="3.16165464975608E-22"
+        ixz="5.97513911267727E-22"
+        iyy="4.75627979379092E-06"
+        iyz="1.89865222061709E-23"
+        izz="4.75627979379092E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_plate_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_plate_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_frame_plate_joint"
+    type="fixed">
+    <origin
+      xyz="0.109 0.08 0.027"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link" />
+    <child
+      link="motor_frame_plate_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_frame_forward_Link">
+    <inertial>
+      <origin
+        xyz="-2.28823057374386E-07 0.0217822138287097 2.17578695960192E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.262675015460882" />
+      <inertia
+        ixx="0.000181760474130219"
+        ixy="1.27919087547956E-09"
+        ixz="-1.0219736270917E-09"
+        iyy="0.000277158837880514"
+        iyz="9.43925357548189E-07"
+        izz="0.000181814109013926" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_forward_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_forward_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_frame_forward_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.005 0.040000000000002"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link" />
+    <child
+      link="motor_frame_forward_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_back_Link">
+    <inertial>
+      <origin
+        xyz="1.27726567870573E-06 0.0202811504403952 0.00120300473583097"
+        rpy="0 0 0" />
+      <mass
+        value="0.254768799165078" />
+      <inertia
+        ixx="0.000170091511491632"
+        ixy="7.15155895339047E-09"
+        ixz="-5.88047241025803E-10"
+        iyy="0.000246895063025196"
+        iyz="1.65415888667539E-06"
+        izz="0.000157235815301286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_back_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_back_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_back_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.046 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_frame_forward_Link" />
+    <child
+      link="motor_back_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="axiz_axiz_Link">
+    <inertial>
+      <origin
+        xyz="4.33161889706401E-05 -0.0249080655234863 0.000169768194055099"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117504819322063" />
+      <inertia
+        ixx="3.20914054664418E-06"
+        ixy="-1.0554320138487E-08"
+        ixz="-2.90270999431271E-09"
+        iyy="4.38059866460303E-07"
+        iyz="-4.13650645496704E-08"
+        izz="3.21977645510639E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_axiz_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_axiz_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="axiz_axiz_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.023 -0.013"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_frame_forward_Link" />
+    <child
+      link="axiz_axiz_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_key_Link">
+    <inertial>
+      <origin
+        xyz="0.000618077971090349 -0.0102363418468253 0.00242239130234347"
+        rpy="0 0 0" />
+      <mass
+        value="0.000596379789496703" />
+      <inertia
+        ixx="3.07388849013603E-08"
+        ixy="3.20890992477914E-20"
+        ixz="4.93846825795047E-12"
+        iyy="2.37011369366893E-09"
+        iyz="8.27401507441319E-21"
+        izz="3.07207899558688E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_key_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_key_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_key_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00234869629013112 -0.0355 -0.00920508694889539"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="axiz_axiz_Link" />
+    <child
+      link="right_key_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_axie_plate_Link">
+    <inertial>
+      <origin
+        xyz="-9.39809084689708E-19 0.00571246103379328 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174717895193497" />
+      <inertia
+        ixx="2.82149851734939E-06"
+        ixy="4.24036341072597E-22"
+        ixz="-2.36198581722289E-23"
+        iyy="5.22266278242472E-06"
+        iyz="-1.33015679188105E-22"
+        izz="2.82149851734939E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_axie_plate_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.517647058823529 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_axie_plate_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_axie_plate_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.075 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="axiz_axiz_Link" />
+    <child
+      link="right_axie_plate_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_plate_flate_Link">
+    <inertial>
+      <origin
+        xyz="1.74545703695463E-05 -0.0213755034456513 6.84084347233986E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0413400219550374" />
+      <inertia
+        ixx="1.36334173134446E-05"
+        ixy="3.39196773423731E-09"
+        ixz="-5.89884624400016E-09"
+        iyy="2.35587844456605E-05"
+        iyz="1.32937102927613E-08"
+        izz="1.36550313056858E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_plate_flate_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_plate_flate_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_plate_flate_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.041 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="right_axie_plate_Link" />
+    <child
+      link="right_plate_flate_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_wheel_Link">
+    <inertial>
+      <origin
+        xyz="1.19994576649211E-11 2.77555756156289E-17 3.42672418218726E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.474314075022242" />
+      <inertia
+        ixx="0.000976484826943806"
+        ixy="4.65992994449456E-11"
+        ixz="9.31112695318243E-20"
+        iyy="0.00180041098789272"
+        iyz="-1.64649688860774E-10"
+        izz="0.000976484826943806" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.282352941176471 0.662745098039216 0.325490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/right_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.028 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="right_plate_flate_Link" />
+    <child
+      link="right_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="side_plate_Link">
+    <inertial>
+      <origin
+        xyz="-0.0127315168909433 0 0.00692908382238111"
+        rpy="0 0 0" />
+      <mass
+        value="0.0084667623156068" />
+      <inertia
+        ixx="1.04396615516139E-06"
+        ixy="3.32263329897079E-22"
+        ixz="3.83681883410377E-07"
+        iyy="1.53404870661137E-06"
+        iyz="3.00566315499569E-23"
+        izz="1.74991797213631E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.807843137254902 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="side_plate_joint"
+    type="fixed">
+    <origin
+      xyz="-0.05 0.015 0.065"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link" />
+    <child
+      link="side_plate_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="side_plate_Link1">
+    <inertial>
+      <origin
+        xyz="0.0127315168909434 0 0.0069290838223811"
+        rpy="0 0 0" />
+      <mass
+        value="0.0084667623156068" />
+      <inertia
+        ixx="1.04396615516139E-06"
+        ixy="4.63637309485589E-22"
+        ixz="-3.83681883410377E-07"
+        iyy="1.53404870661137E-06"
+        iyz="1.85844876421047E-22"
+        izz="1.74991797213631E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.807843137254902 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="side_plate_joint1"
+    type="fixed">
+    <origin
+      xyz="0.05 0.015 0.065"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link" />
+    <child
+      link="side_plate_Link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_seat_Link1">
+    <inertial>
+      <origin
+        xyz="0.000939237456581296 -2.35922392732846E-16 -0.0175085667959579"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189292474445598" />
+      <inertia
+        ixx="6.26207958214669E-06"
+        ixy="4.16063269704332E-21"
+        ixz="9.04183867655086E-09"
+        iyy="2.82510436257499E-06"
+        iyz="-1.61817587776619E-20"
+        izz="4.5184184333863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_joint1"
+    type="fixed">
+    <origin
+      xyz="0.1 -0.062 -0.00299999999999999"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_seat_Link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_seat_Link2">
+    <inertial>
+      <origin
+        xyz="0.000939237456581282 -2.4980018054066E-16 -0.0175085667959579"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189292474445598" />
+      <inertia
+        ixx="6.26207958214669E-06"
+        ixy="4.4402508550729E-21"
+        ixz="9.04183867655085E-09"
+        iyy="2.82510436257499E-06"
+        iyz="-1.60771184449615E-20"
+        izz="4.5184184333863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_joint2"
+    type="fixed">
+    <origin
+      xyz="0.1 0.0619999999999999 -0.00299999999999999"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_seat_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_seat_plate_Link2">
+    <inertial>
+      <origin
+        xyz="-0.0370584293025813 -8.32667268468867E-17 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163676977252262" />
+      <inertia
+        ixx="7.37038999362734E-07"
+        ixy="6.19617960358366E-21"
+        ixz="-2.75471047737358E-22"
+        iyy="4.75627979379093E-06"
+        iyz="-1.39657082172747E-23"
+        izz="4.75627979379093E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_plate_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_plate_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_plate_joint2"
+    type="fixed">
+    <origin
+      xyz="0.00900000000000004 0 -0.017"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_seat_Link2" />
+    <child
+      link="motor_seat_plate_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_plate_frame_Link2">
+    <inertial>
+      <origin
+        xyz="9.51502459658867E-17 -0.0407081867798832 0.0507536404432316"
+        rpy="0 0 0" />
+      <mass
+        value="0.152933426878464" />
+      <inertia
+        ixx="0.000291366836290034"
+        ixy="2.78788862513485E-19"
+        ixz="-1.76183127003108E-19"
+        iyy="0.000361614923679843"
+        iyz="2.87845041329262E-05"
+        izz="0.000421194704644508" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_plate_frame_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_plate_frame_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_plate_frame_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.109 0.0799999999999998 -0.027"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_seat_plate_Link2" />
+    <child
+      link="motor_plate_frame_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_frame_plate_Link2">
+    <inertial>
+      <origin
+        xyz="0.0370584293025813 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0163676977252262" />
+      <inertia
+        ixx="7.37038999362734E-07"
+        ixy="5.6960704788644E-21"
+        ixz="6.55842504374358E-23"
+        iyy="4.75627979379093E-06"
+        iyz="1.77790920063902E-25"
+        izz="4.75627979379093E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_plate_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_plate_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_frame_plate_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.109 -0.0800000000000002 0.027"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link2" />
+    <child
+      link="motor_frame_plate_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_frame_forward_Link2">
+    <inertial>
+      <origin
+        xyz="2.28823057409346E-07 -0.0217822138287097 2.17578695960157E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.262675015460882" />
+      <inertia
+        ixx="0.000181760474130218"
+        ixy="1.27919087561242E-09"
+        ixz="1.02197362707824E-09"
+        iyy="0.000277158837880514"
+        iyz="-9.43925357548187E-07"
+        izz="0.000181814109013925" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_forward_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_frame_forward_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_frame_forward_joint2"
+    type="fixed">
+    <origin
+      xyz="0 -0.005 0.040000000000002"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link2" />
+    <child
+      link="motor_frame_forward_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_back_Link2">
+    <inertial>
+      <origin
+        xyz="-1.27726567868348E-06 -0.0202811504403952 0.00120300473583097"
+        rpy="0 0 0" />
+      <mass
+        value="0.254768799165078" />
+      <inertia
+        ixx="0.000170091511491632"
+        ixy="7.15155895351654E-09"
+        ixz="5.88047241021185E-10"
+        iyy="0.000246895063025195"
+        iyz="-1.6541588866754E-06"
+        izz="0.000157235815301286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_back_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_back_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_back_joint2"
+    type="fixed">
+    <origin
+      xyz="0 -0.046 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_frame_forward_Link2" />
+    <child
+      link="motor_back_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_axiz_Link2">
+    <inertial>
+      <origin
+        xyz="0.000108047675569175 0.0249080655234863 0.000137924732168528"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117504819322063" />
+      <inertia
+        ixx="3.21300808973236E-06"
+        ixy="2.63264413969893E-08"
+        ixz="-5.88240342306959E-09"
+        iyy="4.38059866460302E-07"
+        iyz="3.36062601631709E-08"
+        izz="3.2159089120182E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_axiz_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_axiz_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_axiz_joint2"
+    type="fixed">
+    <origin
+      xyz="0 -0.023 -0.013"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_frame_forward_Link2" />
+    <child
+      link="motor_axiz_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="axiz_key_Link2">
+    <inertial>
+      <origin
+        xyz="0.00154170812433583 0.0102363418468253 0.00196802847016329"
+        rpy="0 0 0" />
+      <mass
+        value="0.000596379789496703" />
+      <inertia
+        ixx="3.07323050884441E-08"
+        ixy="1.29898893159055E-20"
+        ixz="1.00077913040345E-11"
+        iyy="2.37011369366893E-09"
+        iyz="-3.04731482302114E-20"
+        izz="3.07273697687849E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_key_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_key_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="axiz_key_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.00585849087247598 0.0355 -0.00747850818660489"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_axiz_Link2" />
+    <child
+      link="axiz_key_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="axiz_flat_Link2">
+    <inertial>
+      <origin
+        xyz="6.27241187684841E-18 -0.00571246103379328 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174717895193497" />
+      <inertia
+        ixx="2.82149851734939E-06"
+        ixy="3.40495447414916E-21"
+        ixz="4.05342733957991E-22"
+        iyy="5.22266278242471E-06"
+        iyz="-3.56560598507027E-23"
+        izz="2.82149851734939E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_flat_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.517647058823529 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/axiz_flat_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="axiz_flat_joint2"
+    type="fixed">
+    <origin
+      xyz="0 0.075 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_axiz_Link2" />
+    <child
+      link="axiz_flat_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="flat_forward_Link2">
+    <inertial>
+      <origin
+        xyz="4.35378905103114E-05 0.0213755034456513 5.55772260732827E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0413400219550374" />
+      <inertia
+        ixx="1.36412767853152E-05"
+        ixy="-8.46062552959181E-09"
+        ixz="-1.19540642861288E-08"
+        iyy="2.35587844456605E-05"
+        iyz="-1.08002775013299E-08"
+        izz="1.36471718338152E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/flat_forward_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/flat_forward_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flat_forward_joint2"
+    type="fixed">
+    <origin
+      xyz="0 -0.041 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="axiz_flat_Link2" />
+    <child
+      link="flat_forward_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.23476305372268E-11 8.32667268468867E-17 1.80704409769028E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.474314075022243" />
+      <inertia
+        ixx="0.000976484826943808"
+        ixy="2.43786785796448E-11"
+        ixz="-6.20683473317549E-20"
+        iyy="0.00180041098789272"
+        iyz="1.69371470811485E-10"
+        izz="0.000976484826943808" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/left_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.282352941176471 0.662745098039216 0.325490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/left_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.028 0"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="flat_forward_Link2" />
+    <child
+      link="left_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="side_plate_Link2">
+    <inertial>
+      <origin
+        xyz="-0.0127315168909434 -2.77555756156289E-17 0.0069290838223811"
+        rpy="0 0 0" />
+      <mass
+        value="0.00846676231560678" />
+      <inertia
+        ixx="1.04396615516138E-06"
+        ixy="2.36203599371061E-22"
+        ixz="3.83681883410376E-07"
+        iyy="1.53404870661137E-06"
+        iyz="2.61613128884021E-22"
+        izz="1.74991797213631E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.807843137254902 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="side_plate_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.05 -0.0150000000000001 0.065"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link2" />
+    <child
+      link="side_plate_Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="side_plate_Link3">
+    <inertial>
+      <origin
+        xyz="0.0127315168909434 2.77555756156289E-17 0.0069290838223811"
+        rpy="0 0 0" />
+      <mass
+        value="0.00846676231560678" />
+      <inertia
+        ixx="1.04396615516138E-06"
+        ixy="7.37250721511788E-22"
+        ixz="-3.83681883410376E-07"
+        iyy="1.53404870661137E-06"
+        iyz="-7.09693423932732E-22"
+        izz="1.74991797213631E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.807843137254902 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/side_plate_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="side_plate_joint3"
+    type="fixed">
+    <origin
+      xyz="0.05 -0.015 0.065"
+      rpy="-9.35108671021913E-67 0 0" />
+    <parent
+      link="motor_plate_frame_Link2" />
+    <child
+      link="side_plate_Link3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_seat_Link3">
+    <inertial>
+      <origin
+        xyz="-0.00093923745658131 2.4980018054066E-16 -0.0175085667959579"
+        rpy="0 0 0" />
+      <mass
+        value="0.0189292474445598" />
+      <inertia
+        ixx="6.26207958214669E-06"
+        ixy="-7.91606136555118E-22"
+        ixz="-9.04183867655049E-09"
+        iyy="2.82510436257498E-06"
+        iyz="1.5949123561084E-20"
+        izz="4.5184184333863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/motor_seat_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_seat_joint3"
+    type="fixed">
+    <origin
+      xyz="-0.1 0.062 -0.00300000000000001"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_seat_Link3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="circle_base_Link">
+    <inertial>
+      <origin
+        xyz="-0.00076108105272211 9.21930093191199E-15 -0.0244358155851677"
+        rpy="0 0 0" />
+      <mass
+        value="0.31660081903988" />
+      <inertia
+        ixx="0.0089126717791964"
+        ixy="1.4726534098742E-16"
+        ixz="5.98799315902429E-05"
+        iyy="0.0100388621055402"
+        iyz="-3.40316927391112E-17"
+        izz="0.0185817131208827" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/circle_base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/circle_base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="circle_base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0045"
+      rpy="-4.66093176285631E-50 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="circle_base_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="circle_forward_Link">
+    <inertial>
+      <origin
+        xyz="0.0263368386860516 -1.88632172647896E-06 -0.00941398138990095"
+        rpy="0 0 0" />
+      <mass
+        value="0.0603777724846717" />
+      <inertia
+        ixx="0.000321843328628098"
+        ixy="9.79136075759779E-10"
+        ixz="-1.00531201828065E-05"
+        iyy="6.69281139840023E-05"
+        iyz="-1.14263148473526E-09"
+        izz="0.000306984664111483" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/circle_forward_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/circle_forward_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="circle_forward_joint"
+    type="fixed">
+    <origin
+      xyz="0.219 0 -0.037"
+      rpy="-4.66093176285631E-50 0 0" />
+    <parent
+      link="circle_base_Link" />
+    <child
+      link="circle_forward_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="laser_base_Link">
+    <inertial>
+      <origin
+        xyz="0.152704856032779 -0.0619959373186847 -0.041828429582524"
+        rpy="0 0 0" />
+      <mass
+        value="0.140285732636436" />
+      <inertia
+        ixx="7.7979605164669E-05"
+        ixy="-4.78484403510774E-08"
+        ixz="-6.69375321245217E-07"
+        iyy="7.96851388669455E-05"
+        iyz="-1.12154884318809E-08"
+        izz="4.95092058398904E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/laser_base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Okrobot_description/meshes/Okrobot_base/laser_base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_base_joint"
+    type="fixed">
+    <origin
+      xyz="-0.119 0.062 0.0385"
+      rpy="2.99234774727016E-65 -8.94466792300553E-17 -5.37368846090207E-34" />
+    <parent
+      link="circle_forward_Link" />
+    <child
+      link="laser_base_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

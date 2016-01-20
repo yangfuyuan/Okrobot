@@ -1,0 +1,28 @@
+<!-- 
+  Turtlebot is a bit low on horsepower...
+
+  We use openni_camera here, turn everything on by default
+  (allows the user to conveniently see everything when
+  launching this on its own - use with 
+  turtebot_rviz_launchers/view_robot.launch to visualise)
+  and provide args to disable them so you can optimise the
+  horsepower for your application.
+  
+  For an example of disabling processing modules, check
+  any of the turtlebot_rapps (e.g. android_make_a_map.launch
+  only enables scan_processing for depthimage_to_laserscan and
+  rgb_processing for the android tele-view).
+-->
+<launch>
+  <!-- "camera" should uniquely identify the device. All topics are pushed down
+       into the "camera" namespace, and it is prepended to tf frame ids. -->
+  <arg name="2d_sensor"   default="$(optenv OKROBOT_2D_SENSOR hokuyo)"/>  <!-- sick, hokuyo,rpdlir -->
+  <arg name="laser_frame" default="laser_base_Link" />
+  <!-- Laserscan topic -->
+  <arg name="scan_topic" default="scan"/>
+
+  <include file="$(find okrobot_bringup)/launch/includes/2dsensor/$(arg 2d_sensor).launch.xml">
+      <param name="frame_id" type="str" value="$(arg laser_frame)" />
+      <remap from="scan" to="$(arg scan_topic)"/>
+  </include>
+</launch>

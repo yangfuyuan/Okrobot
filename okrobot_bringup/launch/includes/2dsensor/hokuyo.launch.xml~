@@ -1,0 +1,18 @@
+<launch>
+  <arg name="scan_topic" default="scan" />
+  <arg name="laser_frame" default="base_laser_frame" />
+  <!--arg name="laser_port" default="/dev/ttyACM0" /-->
+  
+  <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node">
+    <param name="port" type="string" value="/dev/ttyACM0"/>
+    <param name="min_ang" value="-1.7" />
+    <param name="max_ang" value="1.7" />
+    <param name="min_range" value="0.18" />
+    <param name="hokuyo_node/calibrate_time" value="true" />
+    <param name="frame_id" value="$(arg laser_frame)" />
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+
+  <!--we need a static transform for the laser-->
+  <node pkg="tf" type="static_transform_publicsher" name="base_scan_to_laser" args="0 0 0 0 0 0 /base_scan_link /laser 100" />
+</launch>

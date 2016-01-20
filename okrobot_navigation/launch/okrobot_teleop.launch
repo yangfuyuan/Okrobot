@@ -1,0 +1,10 @@
+<launch>
+  <!-- turtlebot_teleop_key already has its own built in velocity smoother -->
+  <node pkg="okrobot_navigation" type="okrobot_teleop" name="okrobot_teleop_key"  output="screen">
+    <param name="scale_linear" value="0.5" type="double"/>
+    <param name="scale_angular" value="1.5" type="double"/>
+
+<!--    <remap from="arlobot_teleop_keyboard/cmd_vel" to="diffbot_controller/cmd_vel"/> -->
+    <remap from="cmd_vels" to="cmd_vel_mux/input/teleop"/> 
+  </node>
+</launch>
